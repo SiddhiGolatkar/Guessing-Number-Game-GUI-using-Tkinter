@@ -32,21 +32,35 @@ def check_answer():
 root = Tk()
 
 root.title("Guess the number")
-root.geometry("500x200")
+root.geometry("500x400")
 root.configure(background="#FFD700")
+
+space = Label(root, text=" ", font=('calibri', 16), bg="#FFD700")
+space.pack()
 
 label = Label(root, text="Guess the number between 1 & 100", font=('calibri', 16), bg="#FFD700")
 label.pack()
 
+space = Label(root, text=" ", font=('calibri', 12), bg="#FFD700")
+space.pack()
+
 entry_window = Entry(root, width=30, borderwidth=4, fg= "#000")
 entry_window.pack()
 
-btn_check = Button(root, text= "Check", command = check_answer, fg = 'black', bg = "#FFD700")
+space = Label(root, text=" ", font=('calibri', 16), bg="#FFD700")
+space.pack()
+
+btn_check = Button(root, text= "Check", width= 20, command = check_answer, fg = 'black', bg = "#FFD700")
 btn_check.pack()
+
+space = Label(root, text=" ", font=('calibri', 16), bg="#FFD700")
+space.pack()
 
 btn_quit = Button(root, text="Quit", command = root.destroy, fg = 'black', bg = "#FFD700")
 btn_quit.pack()
 
+space = Label(root, text=" ", font=('calibri', 16), bg="#FFD700")
+space.pack()
 
 text = StringVar()
 text.set("You have 10 attempts remaining! Good Luck!")
